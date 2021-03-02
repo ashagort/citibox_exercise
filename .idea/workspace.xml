@@ -2,21 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25ecfa22-499b-4236-a0a9-ce176e8d4d22" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/Commons/Spinner/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/Commons/Spinner/style.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/connectReact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/createMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/styles/_globals.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/styles/_vars.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/views/layouts/beersList/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repository/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/initialState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/mapStateToProps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/reducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/reducers/beers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/reducers/ux.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/usesCases/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infrastructure/views/layouts/beersList/styles.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/getBeer.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/getBeers.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/searchBeers.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/fixtures/beersPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/fixtures/searchingBeers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/Commons/Spinner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/infrastructure/Commons/Spinner/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/Commons/Spinner/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/infrastructure/Commons/Spinner/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/infrastructure/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/connectReact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/infrastructure/connectReact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/createMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/infrastructure/createMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/styles/_vars.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/infrastructure/styles/_vars.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infrastructure/views/layouts/beersList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/infrastructure/views/layouts/beersList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/initialState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/initialState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/mapStateToProps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/mapStateToProps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/reducers/beers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/reducers/beers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/reducers/ux.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/reducers/ux.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/usesCases/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/usesCases/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +82,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614619688940</updated>
-      <workItem from="1614619694736" duration="5625000" />
+      <workItem from="1614619694736" duration="13426000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/test/fixtures/beersPage.js</url>
+          <line>1</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

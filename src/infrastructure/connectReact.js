@@ -1,22 +1,21 @@
-import {createStore, combineReducers, applyMiddleware, compose} from "redux";
-import {IS_PRODUCTION} from './config'
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
+import { IS_PRODUCTION } from './config'
 
 export const configureStore = (
-    initialState = {},
-    middleware = [],
-    reducers
+  initialState = {},
+  middleware = [],
+  reducers
 ) => {
-    const combinedReducers =  combineReducers({
-        ...reducers
-    })
+  const combinedReducers = combineReducers({
+    ...reducers
+  })
 
-    const composeEnhancer = !IS_PRODUCTION
-        ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
-        : compose
+  const composeEnhancer = !IS_PRODUCTION
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
+    : compose
 
-    const enhancer = composeEnhancer(applyMiddleware(...middleware))
-    const store = createStore(combinedReducers, initialState, enhancer)
+  const enhancer = composeEnhancer(applyMiddleware(...middleware))
+  const store = createStore(combinedReducers, initialState, enhancer)
 
-    return store
+  return store
 }
-

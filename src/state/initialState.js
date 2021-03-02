@@ -1,5 +1,11 @@
 export const initialState = {
-    beers : [],
-    pagination: '',
-    selectedBeer: {}
+  beers: {
+    beerList: []
+  },
+  pagination: '',
+  selectedBeer: {},
+  ux: {
+    stage: 'initial',
+    isLoading: false
+  }
 }
