@@ -1,18 +1,31 @@
-@import "./src/infrastructure/styles/_vars";
+@import "../../../styles/_vars";
 
 .beers__list {
   width: 80%;
   margin: 0 auto;
   .card_beer_content {
+    min-height: 380px;
     max-width: 500px;
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     cursor: pointer;
     border: 0.5px solid @dark_violet;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
     .card_beer__header {
       border-bottom: 1px solid @dark_violet;
+
+      .MuiCardHeader-content {
+        .MuiCardHeader-title {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 80%;
+        }
+      }
     }
 
     .card_beer__avatar {
@@ -25,5 +38,11 @@
       background-position: center;
       background-size: contain;
     }
+  }
+
+  .pagination__content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
   }
 }

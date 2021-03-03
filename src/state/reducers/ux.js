@@ -6,7 +6,11 @@ export default function ux (state = {}, action) {
     case 'GET_BEERS':
       return { ...newState, isLoading: false }
     case 'SELECT_DETAIL_BEER':
-      return { ...newState, stage: 'detail' }
+      return { ...newState, stage: 'detail', isLoading: false }
+    case 'CHANGE_VIEW':
+      return { ...newState, styleView: action.payload }
+    case 'MY_FAVORITES_BEERS':
+      return { ...newState, stage: 'favorites' }
     default:
       return newState
   }

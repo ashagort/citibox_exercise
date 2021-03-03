@@ -1,0 +1,33 @@
+@import "../../../styles/_vars";
+
+.beers__list__container {
+  .beer__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-height: 80px;
+    border-bottom: 1px solid @light_violet;
+    margin-bottom: 5px;
+
+    .beer_list__info {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .info {
+        width: 50%;
+      }
+
+      .beer__image {
+        display: flex;
+        align-items: center;
+        img {
+          max-height: 70px;
+        }
+      }
+    }
+
+  }
+}

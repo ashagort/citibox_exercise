@@ -6,10 +6,11 @@ import { useCaseStore } from './usesCases'
 import repositoryStore from './repository/index'
 
 import { Spinner } from './infrastructure/Commons/Spinner'
-import { BeerList } from './infrastructure/views/layouts/beersList'
+import { BeerDetail } from './infrastructure/views/layouts/beerDetail'
 
 import './infrastructure/styles/_globals.css'
 import './App.css'
+import { CitiBoxBeers } from './infrastructure/views/layouts'
 
 const repository = repositoryStore()
 
@@ -18,10 +19,18 @@ export const App = ({
   getBeers,
   getBeer,
   searchBeers,
+  paginationBeersList,
+  addFavoriteBeer,
+  viewStyle,
+  userFavoritesBeers,
   /* MAPSTATE */
   beers,
   stage,
-  isLoading
+  isLoading,
+  selectedBeer,
+  numPageUser,
+  styleView,
+  favoriteBeers
 }) => {
   const [isLoadingState, setIsLoadingState] = useState(false)
 
@@ -29,7 +38,7 @@ export const App = ({
     (async function initialBeers () {
       setIsLoadingState(true)
       try {
-        getBeers(1)
+        getBeers(numPageUser)
       } catch (e) {
         console.error(e)
       } finally {
@@ -41,14 +50,31 @@ export const App = ({
   let component
 
   if (stage === 'initial') {
-    component = <BeerList
+    component = <CitiBoxBeers
         getBeers={getBeers}
         beers={beers}
         getBeer={getBeer}
+        addFavoriteBeer={addFavoriteBeer}
+        paginationBeersList={paginationBeersList}
+        styleView={styleView}
+        viewStyle={viewStyle}
+        userFavoritesBeers={userFavoritesBeers}
+        favoriteBeers={favoriteBeers}
     />
   }
 
-  if (stage === 'detail') component = <div>Detalle Beer</div>
+  if (stage === 'detail') {
+    component = <BeerDetail
+        viewStyle={viewStyle}
+        selectedBeer={selectedBeer}
+        userFavoritesBeers={userFavoritesBeers}
+        favoriteBeers={favoriteBeers}
+      />
+  }
+
+  if (stage === 'favorites') {
+    component = <div>Favorites</div>
+  }
 
   const getLoading = () => {
     if (isLoadingState || isLoading) {
@@ -67,5 +93,4 @@ export const App = ({
   )
 }
 
-// eslint-disable-next-line react-hooks/rules-of-hooks
 export default connect(mapStateToProps, useCaseStore(repository))(App)

@@ -1,11 +1,13 @@
 export const initialState = {
   beers: {
-    beerList: []
+    beerList: [],
+    selectedBeer: {},
+    favoriteBeers: [],
+    pagination: 1
   },
-  pagination: '',
-  selectedBeer: {},
   ux: {
     stage: 'initial',
-    isLoading: false
+    isLoading: false,
+    styleView: 'cards'
   }
 }
