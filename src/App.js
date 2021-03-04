@@ -15,7 +15,7 @@ import './App.css'
 
 const repository = repositoryStore()
 
-export const App = ({
+const App = ({
   /* USECASES */
   getBeers,
   getBeer,

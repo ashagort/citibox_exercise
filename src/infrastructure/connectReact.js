@@ -1,5 +1,4 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
-import { IS_PRODUCTION } from './config'
 
 export const configureStore = (
   initialState = {},
@@ -10,11 +9,14 @@ export const configureStore = (
     ...reducers
   })
 
-  const composeEnhancer = !IS_PRODUCTION
-    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
-    : compose
+  let composeEnhancers = null
+  if (process.env.NODE_ENV === 'development') {
+    composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  } else {
+    composeEnhancers = compose
+  }
 
-  const enhancer = composeEnhancer(applyMiddleware(...middleware))
+  const enhancer = composeEnhancers(applyMiddleware(...middleware))
   const store = createStore(combinedReducers, initialState, enhancer)
 
   return store
