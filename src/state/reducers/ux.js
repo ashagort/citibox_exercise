@@ -11,6 +11,8 @@ export default function ux (state = {}, action) {
       return { ...newState, styleView: action.payload }
     case 'MY_FAVORITES_BEERS':
       return { ...newState, stage: 'favorites' }
+    case 'GO_BACK':
+      return { ...newState, stage: 'initial' }
     default:
       return newState
   }

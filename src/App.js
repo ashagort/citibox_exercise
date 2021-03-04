@@ -7,10 +7,11 @@ import repositoryStore from './repository/index'
 
 import { Spinner } from './infrastructure/Commons/Spinner'
 import { BeerDetail } from './infrastructure/views/layouts/beerDetail'
+import { CitiBoxBeers } from './infrastructure/views/layouts'
+import { FavoritesBeers } from './infrastructure/views/layouts/favoritesBeers'
 
 import './infrastructure/styles/_globals.css'
 import './App.css'
-import { CitiBoxBeers } from './infrastructure/views/layouts'
 
 const repository = repositoryStore()
 
@@ -23,6 +24,7 @@ export const App = ({
   addFavoriteBeer,
   viewStyle,
   userFavoritesBeers,
+  userGoHome,
   /* MAPSTATE */
   beers,
   stage,
@@ -60,6 +62,9 @@ export const App = ({
         viewStyle={viewStyle}
         userFavoritesBeers={userFavoritesBeers}
         favoriteBeers={favoriteBeers}
+        searchBeers={searchBeers}
+        numPageUser={numPageUser}
+        userGoHome={userGoHome}
     />
   }
 
@@ -69,11 +74,17 @@ export const App = ({
         selectedBeer={selectedBeer}
         userFavoritesBeers={userFavoritesBeers}
         favoriteBeers={favoriteBeers}
+        userGoHome={userGoHome}
       />
   }
 
   if (stage === 'favorites') {
-    component = <div>Favorites</div>
+    component = <FavoritesBeers
+        viewStyle={viewStyle}
+        userFavoritesBeers={userFavoritesBeers}
+        favoriteBeers={favoriteBeers}
+        userGoHome={userGoHome}
+    />
   }
 
   const getLoading = () => {

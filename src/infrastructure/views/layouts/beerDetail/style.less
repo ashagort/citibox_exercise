@@ -4,4 +4,75 @@
 .selected_beer__container {
   width: 70%;
   max-width: 860px;
+  margin: 0 auto;
+  font-family: @Typography_Lato;
+
+  @media @mobile {
+    width: 90%;
+  }
+
+  .selected_beer_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media @mobile {
+      flex-direction: column;
+    }
+
+    .separator {
+      width: 80%;
+      margin: 0 auto;
+      border-bottom: 2px solid @light_violet;
+    }
+
+    .selected_beer_info {
+      max-width: 50%;
+      @media @mobile {
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 35px;
+        font-weight: @Black_900;
+      }
+      h3 {
+        font-size: 20px;
+        font-weight: @Bold_700;
+      }
+
+      .description {
+        margin-top: 20px;
+      }
+
+      .ingredients {
+        .sub__ingredients {
+          p {
+            font-weight: @Bold_700;
+          }
+        }
+      }
+
+      .food {
+        p {
+          font-weight: @Bold_700;
+        }
+      }
+
+    }
+
+    .selected_beer_image {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @media @mobile {
+        margin-top: 15px;
+      }
+      img {
+        width: 50%;
+      }
+    }
+  }
 }

@@ -2,13 +2,21 @@
 
 .header__container {
   margin-bottom: 20px;
+  font-family: @Typography_Lato;
   .user__options {
     display: flex;
     align-items: center;
     margin: 20px 0 20px 0;
     .logo {
+      font-weight: @Black_900;
+      cursor: pointer;
       img {
         width: 25%;
+
+        @media @mobile {
+          width: 60%;
+        }
+
       }
     }
   }
@@ -21,5 +29,49 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    font-family: @Typography_Lato;
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      @media @mobile {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      input[type=text] {
+        max-width: 25%;
+        border: 2px solid #ABA4BA;
+        border-radius: 4px;
+        width: 100%;
+        padding: 15px;
+        appearance: none;
+        outline: none;
+        margin-top: 0px;
+        margin-right: 10px;
+        @media @mobile {
+          max-width: 90%;
+          margin-bottom: 5px;
+        }
+      }
+
+      input[type=reset] {
+        padding: 0.92857rem 1.57143rem;
+        border-radius: 999rem;
+        bottom: 0;
+        font-size: 1.07143rem;
+        background-color: @aquamarine;
+        color: white;
+        @media @mobile {
+          width: 90%;
+        }
+      }
+    }
+  }
+  .disabled {
+    display: none;
   }
 }

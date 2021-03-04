@@ -1,7 +1,11 @@
-@import "../../../styles/_vars";
+@import "./../../../styles/_vars";
 
-.beers__list__container {
+.beers__list__favorite__container {
+  width: 70%;
+  max-width: 860px;
+  margin: 0 auto;
   font-family: @Typography_Lato;
+
   .beer__list {
     display: flex;
     flex-direction: row;
@@ -9,10 +13,6 @@
     max-height: 80px;
     border-bottom: 1px solid @light_violet;
     margin-bottom: 5px;
-
-    @media @mobile {
-      max-height: none;
-    }
 
     .beer_list__info {
       width: 90%;

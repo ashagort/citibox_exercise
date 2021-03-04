@@ -5,7 +5,8 @@ export const useCaseStore = (repository) => (dispatch) => ({
   addFavoriteBeer: addFavoriteBeer(dispatch),
   paginationBeersList: paginationBeersList(dispatch),
   viewStyle: viewStyle(dispatch),
-  userFavoritesBeers: userFavoritesBeers(dispatch)
+  userFavoritesBeers: userFavoritesBeers(dispatch),
+  userGoHome: userGoHome(dispatch)
 })
 
 function getBeers (repository, dispatch) {
@@ -82,5 +83,13 @@ function userFavoritesBeers (dispatch) {
     } else {
       window.alert('Add some beer to your favorites')
     }
+  }
+}
+
+function userGoHome (dispatch) {
+  return function () {
+    dispatch({
+      type: 'GO_BACK'
+    })
   }
 }

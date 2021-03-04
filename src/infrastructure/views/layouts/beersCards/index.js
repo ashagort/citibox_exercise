@@ -29,7 +29,7 @@ export const BeerCards = ({
   const beersCard = () => {
     return beers.map((beer, index) => {
       return (
-                <Grid item xs={6} sm={3} key={index}>
+                <Grid item xs={12} sm={3} key={index}>
                     <Card className={'card_beer_content'} >
                         <CardHeader
                             avatar={

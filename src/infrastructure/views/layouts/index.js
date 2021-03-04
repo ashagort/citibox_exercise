@@ -13,7 +13,10 @@ export const CitiBoxBeers = ({
   styleView,
   viewStyle,
   userFavoritesBeers,
-  favoriteBeers
+  favoriteBeers,
+  searchBeers,
+  numPageUser,
+  userGoHome
 }) => {
   let component
 
@@ -44,7 +47,15 @@ export const CitiBoxBeers = ({
 
   return (
       <div className={'beers__list'}>
-          <HeaderList view={true} viewStyle={viewStyle} handleViewFavoritesBeers={handleViewFavoritesBeers} />
+          <HeaderList
+              view={true}
+              viewStyle={viewStyle}
+              handleViewFavoritesBeers={handleViewFavoritesBeers}
+              searchBeers={searchBeers}
+              getBeers={getBeers}
+              numPageUser={numPageUser}
+              userGoHome={userGoHome}
+          />
           {component}
           <PaginationContent num={10} onClick={handleChangePage} />
       </div>

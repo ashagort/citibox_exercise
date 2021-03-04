@@ -1,29 +1,25 @@
 import React from 'react'
-
-import { iconBeer } from '../../../Utils'
+import { HeaderList } from '../../../Commons/HeaderList'
+import CardActions from '@material-ui/core/CardActions'
 import IconButton from '@material-ui/core/IconButton'
 import FavoriteIcon from '@material-ui/icons/Favorite'
-import CardActions from '@material-ui/core/CardActions'
+import { iconBeer } from '../../../Utils'
 
 import './style.css'
 
-export const BeersList = ({
-  beers,
-  getBeer,
-  addFavoriteBeer
-}) => {
-  const handleFavoriteBeer = (beer) => {
-    addFavoriteBeer(beer)
+export const FavoritesBeers = ({ viewStyle, userFavoritesBeers, favoriteBeers, userGoHome }) => {
+  const handleViewFavoritesBeers = () => {
+    userFavoritesBeers(favoriteBeers)
   }
 
   const beersList = () => {
-    return beers.map((beer, index) => {
+    return favoriteBeers.map((beer, index) => {
       return (
                 <div className={'beer__list'} key={index}>
                     <div className={'beer__list__favorite'}>
                         <CardActions disableSpacing>
                             <IconButton aria-label="add to favorites">
-                                <FavoriteIcon onClick={() => handleFavoriteBeer(beer)} />
+                                <FavoriteIcon />
                             </IconButton>
                         </CardActions>
                     </div>
@@ -45,7 +41,8 @@ export const BeersList = ({
   }
 
   return (
-        <div className={'beers__list__container'}>
+        <div className={'beers__list__favorite__container'}>
+            <HeaderList view={false} viewStyle={viewStyle} handleViewFavoritesBeers={handleViewFavoritesBeers} userGoHome={userGoHome} />
             {beersList()}
         </div>
   )

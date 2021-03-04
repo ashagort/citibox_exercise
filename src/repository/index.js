@@ -1,5 +1,8 @@
 import * as axios from 'axios'
 
+const beerName = {}
+const beerDate = {}
+
 export default function () {
   return {
     getBeers,
@@ -25,9 +28,21 @@ async function getBeer (beerId) {
 }
 
 async function searchBeers (name, date) {
-  const URL = `https://api.punkapi.com/v2/beers?beer_name=${name}&brewed_after=${date}`
+  if (name !== '') {
+    Object.assign(beerName, { beer_name: name })
+  }
 
-  const filterBeers = await axios.get(URL)
+  if (date !== '') {
+    Object.assign(beerDate, { brewed_after: date })
+  }
+
+  const queryParams = Object.assign({}, beerName, beerDate)
+
+  const baseUrl = 'https://api.punkapi.com/v2/beers?'
+  const queryString = new URLSearchParams(queryParams).toString()
+  const URL = `${baseUrl}${queryString}`
+
+  const filterBeers = await axios(URL)
 
   return filterBeers.data
 }

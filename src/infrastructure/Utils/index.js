@@ -1,3 +1,4 @@
+
 export const iconBeer = (value) => {
   let icon = null
   if (value > 15) {

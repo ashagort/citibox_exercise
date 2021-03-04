@@ -5,6 +5,8 @@ export default function beers (state = {}, action) {
   switch (action.type) {
     case 'GET_BEERS':
       return { ...newState, beerList: action.payload }
+    case 'SEARCHING_BEERS':
+      return { ...newState, beerList: action.payload }
     case 'SELECT_DETAIL_BEER':
       return { ...newState, selectedBeer: action.payload }
     case 'FAVORITE_BEER':
