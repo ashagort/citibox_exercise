@@ -29,7 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-css": "node-less-chokidar src/ -0 src",
-    "start": "npm-run-all -p watch-css start-js"
+    "start": "npm-run-all -p build-css start-js"
   },
   "eslintConfig": {
     "extends": [

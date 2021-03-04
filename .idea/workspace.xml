@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25ecfa22-499b-4236-a0a9-ce176e8d4d22" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/views/layouts/beersCards/beerCards.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infrastructure/views/layouts/index.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/mapStateToProps.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/reducers/beers.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/fixtures/initialState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infrastructure/connectReact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/infrastructure/connectReact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614619688940</updated>
       <workItem from="1614619694736" duration="26114000" />
-      <workItem from="1614868391817" duration="15956000" />
+      <workItem from="1614868391817" duration="16283000" />
     </task>
     <servers />
   </component>
